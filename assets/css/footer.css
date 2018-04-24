@@ -1,8 +1,8 @@
 .footer {
   background: #191818;
-  color: #D0D0D0;
+  color: #464242;
   line-height: 50px;
-  padding-left: 40px;
+  padding-left: 10px;
   font-size: 14px;
 }
 
@@ -16,22 +16,16 @@
 .details {
   text-align: right;
   float: right;
-  padding-right: 25px;
+  padding-right: 40px;
 }
 
 .miniimg {
-  height: 16px;
-  width: 16px;
+  vertical-align: middle;
 }
 
 .footer__links {
   text-decoration: none;
-  color: #F0F0F0;
   padding-left: 5px;
-}
-
-.footer__links:hover {
-  color: #BEBEBE;
 }
 
 .footer__nav {
@@ -42,6 +36,5 @@
 
 .footer__nav__item {
   float: left;
-  padding-left: 30px;
-  padding-right: 10px;
+  padding-left: 15px;
 }
