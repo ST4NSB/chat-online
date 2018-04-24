@@ -1,5 +1,5 @@
 .header {
-  background-color: #17202A;
+  background-color: #1e1e1e;
   width: 100%;
   position: fixed;
   top: 0;
@@ -25,7 +25,7 @@
 }
 
 .nav__item .nav__link {
-  color: #F4F6F6;
+  color: #fff;
   display: block;
   text-decoration: none;
   padding: 15px;
@@ -33,9 +33,10 @@
 }
 
 .nav__item .nav__link:hover:not(.active) {
-  background-color: #379683;
+  background-color: #F39C12;
+  color: #F5F5F5;
 }
 
 .active {
-  background-color: #2874A6;
+  background-color: #D35400;
 }

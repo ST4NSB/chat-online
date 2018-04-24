@@ -6,9 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Chat Room</title>
   <link rel="shortcut icon" type="image/png" href="assets/images/favicon.png">
-  <link rel="stylesheet" type="text/css" href="assets/css/formstyle.css">
-  <link rel="stylesheet" type="text/css" href="assets/css/navbar.css">
   <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/navbar.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/formstyle.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/footer.css">
 </head>
 
 <body>
@@ -26,31 +27,36 @@
   </header>
 
 
-  <form>
-    <div class="chatbox">
+  <main class="main__content">
+    <form>
+      <div class="chatbox">
 
-      <div class="chatlogs">
+        <div class="chatlogs">
 
-        <div class="chat friend">
-          <p class="chat-message">12:40 [Michael] <br> hi</p>
+          <div class="chat friend">
+            <p class="chat-message">12:40 [Michael] <br> hi</p>
+          </div>
+
+          <div class="chat self">
+            <p class="chat-message">12:48 [Me] <br> byefhyfhthgfhgfhgfghfgghfffftyrytrytrytrytrytrytrytrytrytrytry</p>
+          </div>
+
         </div>
 
-        <div class="chat self">
-          <p class="chat-message">12:48 [Me] <br> byefhyfhthgfhgfhgfghfgghfffftyrytrytrytrytrytrytrytrytrytrytry</p>
+
+        <div class="chat-form">
+          <textarea id="mytxt" placeholder="Type here.."></textarea>
+          <button id="sendbtn">SEND</button>
         </div>
 
       </div>
+    </form>
+  </main>
 
 
-      <div class="chat-form">
-        <textarea id="mytxt" placeholder="Type here.."></textarea>
-        <button id="sendbtn">SEND</button>
-      </div>
-
-    </div>
-  </form>
 
   <footer class="footer">
+    Hello world whatsuppffff
   </footer>
 
 </body>
