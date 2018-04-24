@@ -18,6 +18,7 @@
   margin: 0;
   padding: 0;
   font-size: 18px;
+  padding-right: 40px;
 }
 
 .nav__item {
@@ -35,6 +36,10 @@
 .nav__item .nav__link:hover:not(.active) {
   background-color: #F39C12;
   color: #F5F5F5;
+}
+
+.nav__item:nth-last-child(2), .nav__item:last-child {
+  float: right;
 }
 
 .active {
