@@ -9,7 +9,7 @@
   box-shadow: 0 4px #202020;
 	width: 470px;
 	min-width: 380px;
-	height: 345px;
+	height: 350px;
 	margin: 200px auto;
   border-radius: 10px;
 }
@@ -102,7 +102,7 @@
 
 .login__button {
   text-align: center;
-  padding-top: 17px;
+  padding-top: 15px;
 }
 
 .login__button button {
@@ -121,4 +121,10 @@
 
 .login__button button:hover {
   background-color: #d63208;
+}
+
+.login__failmessage {
+  text-align: center;
+  color: #f0f0f0;
+  font-size: 18px;
 }
