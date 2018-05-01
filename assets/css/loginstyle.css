@@ -1,0 +1,124 @@
+.main__login {
+  padding: 20px;
+  min-height: 100%;
+  margin: 0 auto -50px;
+}
+
+.login__window {
+  background-color: #282828;
+  box-shadow: 0 4px #202020;
+	width: 470px;
+	min-width: 380px;
+	height: 380px;
+	margin: 200px auto;
+  border-radius: 10px;
+}
+
+.login__topside {
+  background-color: #B82601;
+	height: 80px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding-top: 18px;
+}
+
+.login__content{
+  padding-top: 5px;
+}
+
+.login__content h1 {
+  margin-top: 14px;
+  color: #909090;
+  font-size: 40px;
+  text-align: center;
+  text-shadow: 0 5px #202020;
+}
+
+.login__username, .login__password, .login__checkbox {
+  margin-bottom: 12px;
+}
+
+
+.login__username label , .login__password label, .login__checkbox{
+  padding-left: 60px;
+  color: #F52430;
+  font-weight: bold;
+  font-size: 20px;
+  vertical-align: middle;
+}
+
+.login__username input {
+  margin-left: 29px;
+}
+
+.login__password input {
+  margin-left: 31px;
+}
+
+.login__username input, .login__password input {
+  background-color: #383838;
+	color: #909090;
+  padding: 5px;
+  resize: none;
+  border: none;
+	border-radius: 3px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.login__checkbox {
+  padding-top: 5px;
+}
+
+.login__checkbox__label input[type='checkbox']{
+	position: relative;
+	cursor: pointer;
+}
+
+.login__checkbox__label input[type='checkbox']:after{
+	content: "";
+	text-align: center;
+	position: absolute;
+	cursor: pointer;
+	height: 15px;
+	width: 15px;
+	left: 0;
+	top: 0;
+	font-size: 10px;
+	background-color: #383838;
+}
+
+.login__checkbox__label input[type='checkbox']:hover:after, input[type='checkbox']:checked:hover:after {
+	background-color: #383838;
+	content: '\2714';
+	color: #909090;
+}
+
+.login__checkbox__label input[type='checkbox']:checked:after {
+	background-color: #383838;
+	content: '\2714';
+	color: #909090;
+}
+
+.login__button {
+  text-align: center;
+  padding-top: 17px;
+}
+
+.login__button button {
+  background-color: #B82601;
+  box-shadow: 0 4px #202020;
+  color: 	#F5F5F5;
+  height: 40px;
+  width: 90px;
+  border: none;
+	cursor: pointer;
+  font-weight: bold;
+  letter-spacing: 1px;
+  border-radius: 20px;
+  font-size: 18px;
+}
+
+.login__button button:hover {
+  background-color: #F52430;
+}

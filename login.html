@@ -4,11 +4,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Online Chat</title>
+  <title>Login - Online Chat</title>
   <link rel="shortcut icon" type="image/png" href="assets/images/favicon.png">
   <link rel="stylesheet" type="text/css" href="assets/css/main.css">
   <link rel="stylesheet" type="text/css" href="assets/css/navbar.css">
-  <link rel="stylesheet" type="text/css" href="assets/css/formstyle.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/loginstyle.css">
   <link rel="stylesheet" type="text/css" href="assets/css/footer.css">
 </head>
 
@@ -18,41 +18,50 @@
     <img class="header__logo" src="assets/images/headerlogo.png" alt="Logo">
     <nav class="nav">
       <ul class="nav__wrapper">
-        <li class="nav__item"><a href="index.html" class="nav__link active">Home</a></li>
+        <li class="nav__item"><a href="index.html" class="nav__link ">Home</a></li>
         <li class="nav__item"><a href="#" class="nav__link">About</a></li>
 
         <li class="nav__item"><a href="#" class="nav__link">Register</a></li>
-        <li class="nav__item"><a href="login.html" class="nav__link">Login</a></li>
+        <li class="nav__item"><a href="login.html" class="nav__link active">Login</a></li>
       </ul>
     </nav>
   </header>
 
 
-  <main class="main__content">
-    <form class="form__chat">
-      <div class="chatbox">
 
-        <div class="chatlogs">
+  <main class="main__login">
+    <form class="form__login">
+      <div class="login__window">
 
-          <div class="chat friend">
-            <p class="chat-message">12:40 [Michael] <br> hi</p>
+        <div class="login__topside"></div>
+        <div class="login__content">
+
+          <div class="login__username">
+            <h1>LOG IN</h1>
+            <label for="username">Username</label>
+            <input name="username" type="text"></input>
           </div>
-
-          <div class="chat self">
-            <p class="chat-message">12:48 [Me] <br> hi</p>
+          <div class="login__password">
+            <label for="password">Password</label>
+            <input name="password" type="password"></input>
           </div>
-
-        </div>
-
-
-        <div class="chat-form">
-          <textarea disabled id="mytxt" placeholder="Login to access the chat"></textarea>
-          <button disabled id="sendbtn" type="button">SEND</button>
+          <div class="login__checkbox">
+            <label class="login__checkbox__label" for="loggedin">
+              <input name="loggedin" type="checkbox"></input>
+              <span>Keep me logged in</span>
+            </label>
+          </div>
+          <div class="login__button">
+            <button type="submit">Login</button>
+          </div>
         </div>
 
       </div>
     </form>
   </main>
+
+
+
 
 
 
