@@ -9,7 +9,7 @@
   box-shadow: 0 4px #202020;
 	width: 470px;
 	min-width: 380px;
-	height: 350px;
+	height: 360px;
 	margin: 200px auto;
   border-radius: 10px;
 }
@@ -27,7 +27,7 @@
 }
 
 .login__content h1 {
-  margin-top: 14px;
+  margin-top: 18px;
   margin-bottom: 7px;
   color: #909090;
   font-size: 40px;
@@ -103,12 +103,11 @@
 
 .login__button {
   text-align: center;
-  padding-top: 15px;
+  padding-top: 14px;
 }
 
 .login__button button {
   background-color: #B82601;
-  box-shadow: 0 4px #202020;
   color: 	#F5F5F5;
   height: 40px;
   width: 90px;
@@ -127,6 +126,25 @@
 .login__failmessage {
   text-align: center;
   color: #f0f0f0;
-  font-size: 18px;
+  font-size: 17px;
   padding-bottom: 10px;
+}
+
+.login__registermsg {
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  color: #909090;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+.login__link {
+  color: #F39C12;
+  text-decoration: none;
+  padding-left: 4px;
+}
+
+.login__link:hover {
+  text-decoration: underline;
 }
