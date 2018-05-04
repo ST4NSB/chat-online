@@ -6,7 +6,7 @@
 
 .about__border {
   background-color: #17202A;
-	box-shadow: 0 4px #202020;
+	box-shadow: 0 4px black;
   width: 800px;
   min-width: 390px;
   height: 460px;
@@ -20,14 +20,21 @@
   color: #D35400;
   width: 750px;
   min-width: 390px;
+  padding-top: 1px;
   height: 415px;
-  padding-top: 23px;
   margin: 0 auto;
   border-radius: 10px;
+  text-align: center;
+  text-shadow: 0 2px black; 
+}
+
+.about__title h1 {
+  text-shadow: 0 4px black;
 }
 
 .about__text {
-  font-size: 18px;
+  font-size: 22px;
   font-weight: bold;
-  text-align: center;
+  text-align: left;
+  padding-left: 50px;
 }
