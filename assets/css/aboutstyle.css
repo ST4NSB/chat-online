@@ -25,11 +25,7 @@
   margin: 0 auto;
   border-radius: 10px;
   text-align: center;
-  text-shadow: 0 2px black; 
-}
-
-.about__title h1 {
-  text-shadow: 0 4px black;
+  text-shadow: 0 2px black;
 }
 
 .about__text {
