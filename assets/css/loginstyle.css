@@ -9,7 +9,7 @@
   box-shadow: 0 4px #202020;
 	width: 470px;
 	min-width: 380px;
-	height: 360px;
+	height: 362px;
 	margin: 200px auto;
   border-radius: 10px;
 }
@@ -89,12 +89,6 @@
 	background-color: #383838;
 }
 
-.login__checkbox__label input[type='checkbox']:hover:after, input[type='checkbox']:checked:hover:after {
-	background-color: #383838;
-	content: '\2714';
-	color: #909090;
-}
-
 .login__checkbox__label input[type='checkbox']:checked:after {
 	background-color: #383838;
 	content: '\2714';
@@ -110,7 +104,7 @@
   background-color: #B82601;
   color: 	#F5F5F5;
   height: 40px;
-  width: 90px;
+  width: 120px;
   border: none;
 	cursor: pointer;
   font-weight: bold;
@@ -125,7 +119,8 @@
 
 .login__failmessage {
   text-align: center;
-  color: #f0f0f0;
+  font-weight: bold;
+  color: #D35400;
   font-size: 17px;
   padding-bottom: 10px;
 }

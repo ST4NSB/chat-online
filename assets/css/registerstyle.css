@@ -1,0 +1,84 @@
+.main__register {
+  padding: 20px;
+  min-height: 100%;
+  margin: 0 auto -50px;
+}
+
+.register__window {
+  background-color: #282828;
+  box-shadow: 0 4px #202020;
+	width: 470px;
+	min-width: 380px;
+	height: 377px;
+	margin: 200px auto;
+  border-radius: 10px;
+}
+
+.register__topside {
+  background-color: #28B463;
+	height: 50px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding-top: 18px;
+}
+
+.register__content{
+  padding-top: 5px;
+}
+
+.register__content h1 {
+  margin-top: 15px;
+  margin-bottom: 8px;
+  color: #1E8449;
+  font-size: 40px;
+  text-align: center;
+  text-shadow: 0 5px #202020;
+}
+
+.register__inputs input {
+  display: block;
+  background-color: #383838;
+	color: #909090;
+  padding: 5px;
+  resize: none;
+	border-radius: 3px;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  margin-bottom: 10px;
+  margin: 10px auto;
+  width: 400px;
+}
+
+.register__inputs input::placeholder {
+  color: #909090;
+}
+
+.register__button {
+  text-align: center;
+  padding-top: 14px;
+}
+
+.register__button button {
+  background-color: #28B463;
+  color: 	#282828;
+  height: 40px;
+  width: 400px;
+  border: none;
+	cursor: pointer;
+  font-weight: bold;
+  letter-spacing: 1px;
+  border-radius: 20px;
+  font-size: 18px;
+}
+
+.register__button button:hover {
+  background-color: #1D8348;
+}
+
+.register__failmessage {
+  text-align: center;
+  color: #D35400;
+  font-size: 16px;
+  font-weight: bold;
+}
