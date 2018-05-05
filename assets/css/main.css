@@ -10,5 +10,7 @@ html, body {
 body {
 	background-color: #03365b;
 	font-family: "Arial", "Verdana", "Tahoma";
-  min-width: 200px;
+  min-width: 300px;
+  width: auto !important;
+  width: 300px;
 }
