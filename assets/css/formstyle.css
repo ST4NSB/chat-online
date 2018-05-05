@@ -16,7 +16,7 @@
 
 .chatlogs {
 	background-color: #edf5e1;
-	padding: 5px;
+	padding-left: 7px;
 	margin-left: 30px;
 	width: 92%;
 	height: 610px;
@@ -37,7 +37,7 @@
 	display: flex;
 	flex-flow: row wrap;
 	align-items: flex-start;
-	margin: 10px 10px 10px 10px;
+	margin: 5px 1px;
 }
 
 .chat .chat-message {
