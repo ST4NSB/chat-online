@@ -59,7 +59,6 @@
   }
 }
 
-
 @media screen and (max-width: 600px) {
   .about__mainwindow {
     width: 450px;
@@ -78,5 +77,18 @@
   .about__text {
     padding-left: 40px;
     font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .about__mainwindow {
+    width: 280px;
+  }
+  .about__mainwindow h1, h2 {
+    font-size: 12px;
+  }
+  .about__text {
+    padding-left: 20px;
+    font-size: 9px;
   }
 }
