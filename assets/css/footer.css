@@ -38,3 +38,9 @@
   float: left;
   padding-left: 15px;
 }
+
+@media screen and (max-width: 600px) {
+  .footer__logo {
+    height: 100%;
+  }
+}
