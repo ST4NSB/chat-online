@@ -8,7 +8,7 @@
 	box-shadow: 0 4px #202020;
 	width: 700px;
 	height: 720px;
-  padding-top: 23px;
+  padding-top: 20px;
 	margin: 0 auto;
 	margin-top: 110px;
   border-radius: 5px;
@@ -180,7 +180,7 @@
 		margin-top: 16px;
 	}
 	.chatlogs::-webkit-scrollbar {
-		width: 7px;
+		width: 9px;
 	}
 	.chat .chat-message {
 		font-size: 13px;
@@ -228,7 +228,7 @@
 
 @media screen and (max-width: 500px) {
 	.chatbox {
-		width: 380px;
+		width: 400px;
 	}
 	.self .chat-message {
 		margin-left: 100px;
@@ -237,7 +237,7 @@
 		width: 86%;
 	}
 	.chat-form textarea {
-		font-size: 13px;
+		font-size: 15px;
 	}
 	.chat-form button {
 		font-size: 16px;
@@ -251,16 +251,22 @@
 @media screen and (max-width: 400px) {
 	.chatbox {
 		width: 280px;
+		padding-top: 8px;
+		height: 410px;
 	}
 	.self .chat-message {
 		margin-left: 80px;
 	}
 	.chatlogs {
-		width: 88%;
-		margin-left: 20px;
+		width: 95%;
+		margin-left: 7px;
+		height: 335px;
 	}
 	.chat-form {
 		margin-left: 20px;
+		margin-top: 9px;
+		margin-left: 9px;
+		margin-right: 1px;
 	}
 	.chat-form textarea {
 		font-size: 12px;
