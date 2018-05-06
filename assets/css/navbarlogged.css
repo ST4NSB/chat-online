@@ -1,0 +1,32 @@
+.nav__item:nth-last-child(2) {
+  float: left;
+}
+
+.nav__item__logged {
+  color: #fff;
+  text-decoration: none;
+  padding: 14px;
+  float: right;
+}
+
+.nav__item__logged .myusername {
+  color: #ea6812;
+}
+
+@media screen and (max-width: 700px) {
+  .nav__item__logged {
+    padding: 8px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .nav__item__logged {
+    padding: 6px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .nav__item__logged {
+    padding: 3px;
+  }
+}
