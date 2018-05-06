@@ -33,10 +33,7 @@
 }
 
 .about__text span {
-  padding: 4px;
-  background-color: #3b8beb;
-  color: #f5f5f5;
-  border-radius: 10px;
+  color: #1b8beb;
 }
 
 @media screen and (max-width: 800px) {

@@ -1,16 +1,14 @@
 .main__login {
-  padding: 20px;
-  min-height: 100%;
-  margin: 0 auto -50px;
+  padding: 1px;
 }
 
 .login__window {
   background-color: #282828;
   box-shadow: 0 4px #202020;
 	width: 470px;
-	min-width: 380px;
 	height: 362px;
 	margin: 200px auto;
+  margin-bottom: 30px;
   border-radius: 10px;
 }
 
@@ -142,4 +140,62 @@
 
 .login__link:hover {
   text-decoration: underline;
+}
+
+@media screen and (max-width: 500px) {
+  .login__window {
+    width: 370px;
+  }
+  .login__content h1 {
+    font-size: 30px;
+  }
+  .login__username label , .login__password label, .login__checkbox {
+    padding-left: 15px;
+  }
+  .login__username input, .login__password input {
+    padding: 3px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .login__window {
+    width: 270px;
+  }
+  .login__content h1 {
+    font-size: 30px;
+  }
+  .login__username label , .login__password label, .login__checkbox {
+    padding-left: 35px;
+    font-size: 14px;
+  }
+  .login__username input, .login__password input {
+    padding: 3px;
+  }
+  .login__registermsg {
+    font-size: 14px;
+  }
+  .login__failmessage {
+    font-size: 14px;
+  }
+  .login__button {
+    padding-top: 10px;
+  }
+  .login__button button {
+    height: 30px;
+    width: 80px;
+  }
+}
+
+@media screen and (max-height: 768px) {
+  .login__window {
+    margin-top: 90px;
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (max-height: 600px) {
+  .login__window {
+    margin-top: 60px;
+    margin-bottom: 1px;
+  }
 }
