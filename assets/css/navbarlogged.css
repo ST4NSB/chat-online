@@ -11,6 +11,7 @@
 
 .nav__item__logged .myusername {
   color: #ea6812;
+  font-weight: bold;
 }
 
 @media screen and (max-width: 700px) {
