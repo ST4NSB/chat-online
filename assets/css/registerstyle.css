@@ -1,16 +1,14 @@
 .main__register {
-  padding: 20px;
-  min-height: 100%;
-  margin: 0 auto -50px;
+  padding: 1px;
 }
 
 .register__window {
   background-color: #282828;
   box-shadow: 0 4px #202020;
 	width: 470px;
-	min-width: 380px;
 	height: 377px;
 	margin: 200px auto;
+  margin-bottom: 1px;
   border-radius: 10px;
 }
 
@@ -56,7 +54,7 @@
 
 .register__button {
   text-align: center;
-  padding-top: 14px;
+  padding-top: 10px;
 }
 
 .register__button button {
@@ -81,4 +79,54 @@
   color: #D35400;
   font-size: 16px;
   font-weight: bold;
+}
+
+@media screen and (max-width: 500px) {
+  .register__window {
+    width: 370px;
+  }
+  .register__button button {
+    width: 300px;
+  }
+  .register__inputs input {
+    width: 300px;
+  }
+  .register__content h1 {
+    font-size: 35px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .register__window {
+    width: 330px;
+  }
+  .register__button button {
+    width: 260px;
+  }
+  .register__inputs input {
+    width: 260px;
+  }
+  .register__content h1 {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-height: 768px) {
+  .register__window {
+    margin-top: 120px;
+    height: 360px;
+  }
+  .register__topside {
+    height: 30px;
+  }
+}
+
+@media screen and (max-height: 600px) {
+  .register__window {
+    margin-top: 58px;
+    height: 350px;
+  }
+  .register__topside {
+    height: 30px;
+  }
 }
