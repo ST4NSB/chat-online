@@ -1,4 +1,7 @@
-<!DOCTYPE html>
+<?php
+  session_start();
+  $_SESSION['currentpg'] = "about";
+?>
 <html lang="en">
 
 <head>
@@ -13,9 +16,7 @@
 <body>
 
   <?php
-    $_SESSION['currentpg'] = "about";
-    $isUserLogged = False;
-    if($isUserLogged)
+    if($_SESSION['$isUserLogged'])
       include "loggednavbar.php";
     else include "navbar.php";
     include "footer.html";

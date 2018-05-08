@@ -1,3 +1,7 @@
+<?php
+  session_start();
+  $_SESSION['currentpg'] = "login";
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,7 +17,6 @@
 <body>
 
   <?php
-    $_SESSION['currentpg'] = "login";
     include "navbar.php";
     include "footer.html";
   ?>
@@ -29,15 +32,15 @@
           <div class="login__failmessage"></div>
           <div class="login__username">
             <label for="username">Username</label>
-            <input id="username" type="text">
+            <input id="username" name="username" type="text" maxlength="30" required>
           </div>
           <div class="login__password">
             <label for="password">Password</label>
-            <input id="password" type="password">
+            <input id="password" name="password" type="password" required>
           </div>
           <div class="login__checkbox">
             <label class="login__checkbox__label" for="checkbox">
-              <input id="checkbox" type="checkbox">
+              <input id="checkbox" name="checkbox" type="checkbox">
               <span>Keep me logged in</span>
             </label>
           </div>

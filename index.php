@@ -1,3 +1,8 @@
+<?php
+  session_start();
+  $_SESSION['currentpg'] = "home";
+  $_SESSION['$isUserLogged'] = False;
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,9 +17,7 @@
 
 <body>
   <?php
-    $_SESSION['currentpg'] = "home";
-    $isUserLogged = True;
-    if($isUserLogged)
+    if($_SESSION['$isUserLogged'])
       include "loggednavbar.php";
     else include "navbar.php";
     include "footer.html";
@@ -38,8 +41,15 @@
 
 
         <div class="chat-form">
-          <textarea disabled id="mytxt" placeholder="Login to access the chat"></textarea>
-          <button disabled id="sendbtn" type="button">SEND</button>
+          <textarea maxlength="100" required
+          <?php
+            if(!$_SESSION['$isUserLogged']) {
+              echo 'disabled placeholder="Login to access the chat"';
+            }
+            else {
+              echo 'placeholder="Type your message here.."';
+            }?> type="text" id="mytxt" name="mytxt"></textarea>
+          <button <?php if(!$_SESSION['$isUserLogged']) echo "disabled"; ?> id="sendbtn" type="submit">SEND</button>
         </div>
 
       </div>

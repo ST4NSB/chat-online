@@ -1,3 +1,7 @@
+<?php
+  session_start();
+  $_SESSION['currentpg'] = "register";
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,7 +17,6 @@
 <body>
 
   <?php
-    $_SESSION['currentpg'] = "register";
     include "navbar.php";
     include "footer.html";
   ?>
@@ -28,10 +31,10 @@
           <h1>REGISTER</h1>
           <div class="register__failmessage"></div>
           <div class="register__inputs">
-            <input placeholder="Create a username.." name="username" type="text">
-            <input placeholder="Type your e-mail address.." name="email" type="email">
-            <input name="password" type="password" placeholder="Create a password..">
-            <input name="passwordconf" type="password" placeholder="Confirm password..">
+            <input placeholder="Create a username.." id="username" name="username" type="text" maxlength="30" required>
+            <input placeholder="Type your e-mail address.." id="email" name="email" type="email" required>
+            <input id="password" name="password" type="password" placeholder="Create a password.." required>
+            <input id="passwordconf" name="passwordconf" type="password" placeholder="Confirm password.." required>
           </div>
           <div class="register__button">
             <button type="submit">Sign up</button>
@@ -41,5 +44,5 @@
       </div>
     </form>
   </main>
-  
+
 </body>
