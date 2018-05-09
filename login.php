@@ -36,7 +36,7 @@
           </div>
           <div class="login__password">
             <label for="password">Password</label>
-            <input id="password" name="password" type="password" required>
+            <input id="password" name="password" type="password" maxlength="30" required>
           </div>
           <div class="login__checkbox">
             <label class="login__checkbox__label" for="checkbox">
