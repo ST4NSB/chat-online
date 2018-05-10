@@ -1,4 +1,5 @@
 <?php
+  session_start();
   include "dbconnect.php";
 
   // primire date
@@ -41,14 +42,20 @@
     header("Location: register.php?exuser_error");
   }
 
-  // criptare parola
-  $password  = md5($userPass);
-
-  // Inserare date in database
   if($continue) {
+    // transmitere user1
+    $_SESSION['username'] = $userName;
+    // criptare parola
+    $password  = md5($userPass);
+
+    // Inserare date in database
     $sql = "INSERT INTO chat_user (username, email, chat_rank, password) VALUES ('$userName', '$eMail', '$chatRank', '$password')";
     if ($link->query($sql) === TRUE)
-      echo "New record created successfully";
+    {
+      //echo "New record created successfully";
+      $_SESSION['$isUserLogged'] = True;
+      header("Location: index.php");
+    }
     else
       echo "ERROR 2: " . $sql . "<br>" . $link->error;
     $link->close();

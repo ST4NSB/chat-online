@@ -1,6 +1,5 @@
 <?php
   $isActive = $_SESSION['currentpg'];
-  $username = "user1";
 ?>
 
 <html lang="en">
@@ -28,7 +27,7 @@
     var time = new Date();
     var hour = time.getHours();
     console.log("Your actual hour is: " + hour);
-    var jsusername = '<?php echo $username;?>';
+    var jsusername = '<?php echo $_SESSION['username'];?>';
     var createspan = document.createElement('span');
     createspan.className = "myusername";
     createspan.innerHTML = jsusername;
