@@ -22,14 +22,34 @@
   ?>
 
   <main class="main__register">
-    <form class="form__register">
+    <form class="form__register" action="register_form.php" method="post">
       <div class="register__window">
 
         <div class="register__topside"></div>
         <div class="register__content">
 
           <h1>REGISTER</h1>
-          <div class="register__failmessage"></div>
+          <div class="register__failmessage">
+            <?php
+                $fullUrl = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+                if(strpos($fullUrl, "pass_error") == true)
+                {
+                    echo 'Password doesn\'t match!';
+                }
+                if(strpos($fullUrl, "nruser_error") == true)
+                {
+                    echo 'Your username must start with a letter!';
+                }
+                if(strpos($fullUrl, "exuser_error") == true)
+                {
+                    echo 'This username already exists! Choose another one!';
+                }
+                if(strpos($fullUrl, "passlow_error") == true)
+                {
+                    echo 'Password must be higher than 7 characters!';
+                }
+            ?>
+          </div>
           <div class="register__inputs">
             <input placeholder="Create a username.." id="username" name="username" type="text" maxlength="30" required>
             <input placeholder="Type your e-mail address.." id="email" name="email" type="email" maxlength="30" required>

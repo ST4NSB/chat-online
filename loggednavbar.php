@@ -15,10 +15,10 @@
     <img class="header__logo" src="assets/images/headerlogo.png" alt="Logo">
     <nav class="nav">
       <ul class="nav__wrapper">
-        <li class="nav__item"><a href="/index.php" <?php if($isActive === "home") echo 'class="nav__link active"'; else echo 'class="nav__link"'; ?>>Home</a></li>
-        <li class="nav__item"><a href="/about.php" <?php if($isActive === "about") echo 'class="nav__link active"'; else echo 'class="nav__link"'; ?>>About</a></li>
+        <li class="nav__item"><a href="index.php" <?php if($isActive === "home") echo 'class="nav__link active"'; else echo 'class="nav__link"'; ?>>Home</a></li>
+        <li class="nav__item"><a href="about.php" <?php if($isActive === "about") echo 'class="nav__link active"'; else echo 'class="nav__link"'; ?>>About</a></li>
 
-          <li class="nav__item"><a href='/logout.php' class="nav__link">Log out</a></li>
+          <li class="nav__item"><a href="logout.php" class="nav__link">Log out</a></li>
         <li id="timeofday" class="nav__item__logged"></li>
       </ul>
   </header>

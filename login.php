@@ -38,14 +38,8 @@
             <label for="password">Password</label>
             <input id="password" name="password" type="password" maxlength="30" required>
           </div>
-          <div class="login__checkbox">
-            <label class="login__checkbox__label" for="checkbox">
-              <input id="checkbox" name="checkbox" type="checkbox">
-              <span>Keep me logged in</span>
-            </label>
-          </div>
           <div class="login__registermsg">
-            Don't have an account? <a class="login__link" href="register.html">REGISTER</a>
+            Don't have an account? <a class="login__link" href="register.php">REGISTER</a>
           </div>
           <div class="login__button">
             <button type="submit">Login</button>
