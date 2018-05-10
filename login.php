@@ -22,21 +22,29 @@
   ?>
 
   <main class="main__login">
-    <form class="form__login">
+    <form class="form__login" action="login_form.php" method="post">
       <div class="login__window">
 
         <div class="login__topside"></div>
         <div class="login__content">
 
           <h1>LOG IN</h1>
-          <div class="login__failmessage"></div>
+          <div class="login__failmessage">
+            <?php
+              $fullUrl = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+              if(strpos($fullUrl, "log_error") == true)
+              {
+                  echo 'Username or password is not correct!';
+              }
+            ?>
+          </div>
           <div class="login__username">
             <label for="username">Username</label>
-            <input id="username" name="username" type="text" maxlength="30" required>
+            <input id="log_username" name="log_username" type="text" maxlength="30" required>
           </div>
           <div class="login__password">
             <label for="password">Password</label>
-            <input id="password" name="password" type="password" maxlength="30" required>
+            <input id="log_password" name="log_password" type="password" maxlength="30" required>
           </div>
           <div class="login__registermsg">
             Don't have an account? <a class="login__link" href="register.php">REGISTER</a>

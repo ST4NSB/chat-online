@@ -1,7 +1,8 @@
 <?php
   session_start();
+  if(!isset($_SESSION['$isUserLogged']))
+    $_SESSION['$isUserLogged'] = False;
   $_SESSION['currentpg'] = "home";
-  //$_SESSION['$isUserLogged'] = False;
 ?>
 <!DOCTYPE html>
 <html lang="en">

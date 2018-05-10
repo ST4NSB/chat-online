@@ -3,11 +3,11 @@
   include "dbconnect.php";
 
   // primire date
-  $userName = $_POST['username'];
-  $eMail = $_POST['email'];
+  $userName = $_POST['reg_username'];
+  $eMail = $_POST['reg_email'];
   $chatRank = 1;
-  $userPass = $_POST['password'];
-  $userconfPass = $_POST['passwordconf'];
+  $userPass = $_POST['reg_password'];
+  $userconfPass = $_POST['reg_passwordconf'];
 
   $continue = True;
 
@@ -43,8 +43,9 @@
   }
 
   if($continue) {
-    // transmitere user1
+    // transmitere username
     $_SESSION['username'] = $userName;
+
     // criptare parola
     $password  = md5($userPass);
 

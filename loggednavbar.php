@@ -33,13 +33,13 @@
     createspan.innerHTML = jsusername;
 
     var message = "";
-    if((hour >= 22 && hour <= 24) || (hour >= 1 && hour <= 6) )
+    if((hour >= 23 && hour <= 24) || (hour >= 1 && hour <= 6) )
       message = "Good night, ";
     if(hour >= 7 && hour <= 12)
       message = "Good morning, ";
     if(hour >= 13 && hour <= 18)
       message = "Good afternoon, ";
-    if(hour >= 19 && hour <= 21)
+    if(hour >= 19 && hour <= 22)
       message = "Good evening, ";
 
     document.getElementById('timeofday').innerHTML = message;
