@@ -34,7 +34,7 @@
               $fullUrl = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
               if(strpos($fullUrl, "log_error") == true)
               {
-                  echo 'Username or password is not correct!';
+                  echo 'Username or password are not correct!';
               }
             ?>
           </div>
