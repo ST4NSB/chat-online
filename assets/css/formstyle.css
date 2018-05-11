@@ -18,26 +18,27 @@
 	background-color: #edf5e1;
 	padding-left: 7px;
 	margin-left: 30px;
+	padding-top: 10px;
 	width: 92%;
 	height: 610px;
-	overflow-x: hidden;
-	overflow-y: scroll;
   border-radius: 3px;
 }
 
-.chatlogs::-webkit-scrollbar {
+#chatData {
+	overflow-y: visible;
+	overflow-x: hidden;
+}
+
+#chatData::-webkit-scrollbar {
 	width: 10px;
 }
 
-.chatlogs::-webkit-scrollbar-thumb {
+#chatData::-webkit-scrollbar-thumb {
 	background-color: #2C3E50;
 }
 
 .chat {
-	display: flex;
-	flex-flow: row wrap;
-	align-items: flex-start;
-	margin: 5px 1px;
+	margin: 8px 3px;
 }
 
 .chat .chat-message {
@@ -47,7 +48,6 @@
 	margin: 5px 10px 0;
 	border-radius: 5px;
 	font-size: 18px;
-  word-wrap: break-word;
 }
 
 .friend .chat-message {
@@ -95,6 +95,25 @@
 
 .chat-form button:hover {
 	background-color: #2982bc;
+}
+
+.errorIndex {
+	font-weight: bold;
+	text-align: center;
+}
+
+.selfchatname {
+	color: #000099;
+	font-weight: bold;
+}
+
+.friendchatname {
+	color: #802000;
+	font-weight: bold;
+}
+
+.space {
+	padding-left: 3px;
 }
 
 @media screen and (max-height: 900px) {

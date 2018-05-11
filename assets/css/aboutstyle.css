@@ -7,30 +7,40 @@
   background-color: #edf5e1;
   box-shadow: 0 4px black;
   color: black;
-  width: 750px;
+  width: 650px;
   padding-top: 1px;
-  height: 435px;
+  height: 485px;
   margin: 140px auto;
   margin-bottom: 1px;
   border-radius: 10px;
   padding-top: 10px;
-  text-align: center;
   border: 20px solid #379683;
 }
 
 .about__mainwindow h1, h2 {
   display: inline-block;
   background-color: #5cdb95;
-  margin: 10px 0 0 0;
+  margin: 4px 0 0 0;
   padding: 4px;
   border-radius: 10px;
+  text-align: center;
+  margin-left: 50px;
+}
+
+.about__mainwindow h3 {
+  display: inline-block;
+  background-color: #1b8beb;
+  margin: 7px 0 0 0;
+  padding: 4px;
+  border-radius: 10px;
+  margin-left: 70px;
 }
 
 .about__text {
-  font-size: 20px;
+  font-size: 16px;
   font-weight: bold;
   text-align: left;
-  padding-left: 100px;
+  padding-left: 85px;
 }
 
 .about__text span {

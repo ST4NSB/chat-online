@@ -32,6 +32,10 @@
           <div class="register__failmessage">
             <?php
                 $fullUrl = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+                if(strpos($fullUrl, "un_error") == true)
+                {
+                    echo 'An unexpected error appeared! Can\'t use that characters!';
+                }
                 if(strpos($fullUrl, "pass_error") == true)
                 {
                     echo 'Password confirmation doesn\'t match your password!';

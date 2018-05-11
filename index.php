@@ -2,6 +2,9 @@
   session_start();
   if(!isset($_SESSION['$isUserLogged']))
     $_SESSION['$isUserLogged'] = False;
+  if(!isset($_SESSION['username']))
+    $_SESSION['username'] = "none";
+
   $_SESSION['currentpg'] = "home";
 ?>
 <!DOCTYPE html>
@@ -28,50 +31,50 @@
     <form class="form__chat" action="chat_action.php" method="post">
       <div class="chatbox">
 
-        <div class="chatlogs">
-
-          <!--
-          <div class="chat friend">
-            <p class="chat-message">12:40 [Michael] <br> hi</p>
-          </div>
-
-          <div class="chat self">
-            <p class="chat-message">12:48 [Me] <br> hi</p>
-          </div> -->
+        <div id="chatData" class="chatlogs">
 
           <?php
             include 'dbconnect.php';
 
-            $sql_order = "SELECT * FROM chat_message ORDER BY id_message;";
-            $result = $link->query($sql_order);
-
-            $sql = 'SELECT user_message, message_time, user FROM chat_message';
+            $sql = 'SELECT id_message, user_message, message_time, user FROM chat_message ORDER BY id_message ASC';
             if ($result = mysqli_query($link, $sql)) {
               if (mysqli_num_rows($result) > 0) {
                 while ($row = mysqli_fetch_array($result)) {
-                  echo $row['user_message'] . '<br>';
-                  echo $row['message_time'] . '<br>';
-                  echo $row['user'] . '<br>';
+                  if($row['user'] === $_SESSION['username']) {
+                    echo '<div class="chat self">';
+                      echo '<p class="chat-message"> <span class="selfchatname">' . $_SESSION['username'] . '<span class="space"></span> (' . $row['message_time'] . ')</span><br>' . $row['user_message'] . '</p>';
+                    echo '</div>';
+                  }
+                  else {
+                    echo '<div class="chat friend">';
+                      echo '<p class="chat-message"> <span class="friendchatname">' . $row['user'] . '<span class="space"></span> (' . $row['message_time'] . ')</span><br>' . $row['user_message'] . '</p>';
+                    echo '</div>';
+                  }
               }
               // Eliberare rezultat
               mysqli_free_result($result);
-            } else {
-              echo 'No records matching your query were found.';
             }
-          } else {
-            echo 'ERROR: Could not able to execute ' . $sql . mysqli_error($link);
           }
+          else echo 'ERROR 5: Could not able to execute ' . $sql . mysqli_error($link);
 
+          // Inchidere conexiune
+          mysqli_close($link);
+        ?>
 
-
-            // Inchidere conexiune
-            mysqli_close($link);
-          ?>
+        <?php
+            $fullUrl = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+            if(strpos($fullUrl, "info_error") == true)
+            {
+                echo '<script>
+                  window.alert("Can\'t type this kind of thing in chat!");
+                </script>';
+            }
+         ?>
 
         </div>
 
 
-        <div class="chat-form">
+        <div id="inputArea" class="chat-form">
           <textarea maxlength="100" required
           <?php
             if(!$_SESSION['$isUserLogged']) {
@@ -87,6 +90,21 @@
     </form>
   </main>
 
+
+  <script>
+    // scrollul in josul paginii
+    var objDiv = document.getElementById("chatData");
+    objDiv.scrollTop = objDiv.scrollHeight;
+
+    // mesaj trimis la enter
+    document.getElementById('inputArea').addEventListener("keyup", function(event) {
+      event.preventDefault();
+      // 13 - enter code
+      if (event.keyCode === 13) {
+          document.getElementById("sendbtn").click();
+      }
+    });
+  </script>
 
 </body>
 

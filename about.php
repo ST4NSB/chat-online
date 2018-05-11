@@ -30,7 +30,13 @@
           <li>Made for an university course project!</li>
           <li>Author: <span>Bărbulescu Adrian</span> (personal links in the footer)</li>
         </ul>
-        <h2>Chat Commands</h2>
+        <h2>Chat Commands</h2> <br>
+        <h3>USER</h3>
+        <ul class="about__text">
+          <li>/about - goes to about page</li>
+          <li>/logout - log out from your current account</li>
+        </ul>
+        <h3>ADMIN</h3>
         <ul class="about__text">
           <li>TBA</li>
         </ul>

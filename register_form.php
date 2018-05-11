@@ -11,6 +11,70 @@
 
   $continue = True;
 
+  if (strpos($userName, '\'') !== false || strpos($userName, '\n') !== false) {
+    $continue = False;
+    header("Location: register.php?un_error");
+  }
+  if (strpos($userName, '<') !== false || strpos($userName, '>') !== false) {
+    $continue = False;
+    header("Location: register.php?un_error");
+  }
+  if (strpos($userName, 'SELECT') !== false || strpos($userName, 'select') !== false) {
+    $continue = False;
+    header("Location: register.php?un_error");
+  }
+  if (strpos($userName, 'INSERT') !== false || strpos($userName, 'insert') !== false) {
+    $continue = False;
+    header("Location: register.php?un_error");
+  }
+  if (strpos($userName, 'UPDATE') !== false || strpos($userName, 'update') !== false) {
+    $continue = False;
+    header("Location: register.php?un_error");
+  }
+  if (strpos($userName, 'DELETE') !== false || strpos($userName, 'delete') !== false) {
+    $continue = False;
+    header("Location: register.php?un_error");
+  }
+  if (strpos($userName, 'DROP') !== false || strpos($userName, 'drop') !== false) {
+    $continue = False;
+    header("Location: register.php?un_error");
+  }
+
+  if (strpos($userPass, '\'') !== false || strpos($userPass, '\n') !== false) {
+    $continue = False;
+    header("Location: register.php?un_error");
+  }
+  if (strpos($userPass, '<') !== false || strpos($userPass, '>') !== false) {
+    $continue = False;
+    header("Location: register.php?un_error");
+  }
+  if (strpos($userPass, 'SELECT') !== false || strpos($userPass, 'select') !== false) {
+    $continue = False;
+    header("Location: register.php?un_error");
+  }
+  if (strpos($userPass, 'INSERT') !== false || strpos($userPass, 'insert') !== false) {
+    $continue = False;
+    header("Location: register.php?un_error");
+  }
+  if (strpos($userPass, 'UPDATE') !== false || strpos($userPass, 'update') !== false) {
+    $continue = False;
+    header("Location: register.php?un_error");
+  }
+  if (strpos($userPass, 'DELETE') !== false || strpos($userPass, 'delete') !== false) {
+    $continue = False;
+    header("Location: register.php?un_error");
+  }
+  if (strpos($userPass, 'DROP') !== false || strpos($userPass, 'drop') !== false) {
+    $continue = False;
+    header("Location: register.php?un_error");
+  }
+
+
+  // sa nu fie gol
+  if (!strlen(trim($chat_message))) {
+    $isMessage = False;
+  }
+
   // verificare daca parola e la fel ca in confirm pass
   if($userPass != $userconfPass)
   {
@@ -45,7 +109,6 @@
   }
 
   // verificare prima litera sa inceapa cu o litera
-  $userName = trim($userName);
   if (!ctype_alpha(substr($userName,0,1))) {
     $continue = False;
     header("Location: register.php?nruser_error");
