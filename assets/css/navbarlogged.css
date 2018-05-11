@@ -10,6 +10,17 @@
   font-weight: bold;
 }
 
+.nav__item__logged .userrank {
+  color: #ccff99;
+  font-weight: bold;
+  padding-left: 2px;
+}
+
+.nav__item__logged .admrank {
+  color: #3366ff;
+  font-weight: bold;
+  padding-left: 2px;
+}
 
 
 @media screen and (max-width: 700px) {

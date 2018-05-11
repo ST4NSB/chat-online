@@ -12,8 +12,11 @@
       while($row = $result->fetch_assoc()) {
         $_SESSION['$isUserLogged'] = True;
         $_SESSION['username'] = $row['username'];
+        $_SESSION['rank'] = $row['chat_rank'];
         header("Location: index.php");
       }
+      // Eliberare rezultat
+      mysqli_free_result($result);
     }
     else {
       $sql2 = "SELECT * FROM chat_user WHERE username='$userName' and password='$hashed_pass'"; // verificare parola hashuita
@@ -22,10 +25,16 @@
         while($row = $result2->fetch_assoc()) {
           $_SESSION['$isUserLogged'] = True;
           $_SESSION['username'] = $row['username'];
+          $_SESSION['rank'] = $row['chat_rank'];
           header("Location: index.php");
         }
+        // Eliberare rezultat
+        mysqli_free_result($result2);
       }
       else header("Location:login.php?log_error");
     }
+
+    // Inchidere conexiune
+    mysqli_close($link);
 
  ?>

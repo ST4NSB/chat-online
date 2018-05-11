@@ -26,6 +26,24 @@
     header("Location: register.php?passlow_error");
   }
 
+  // nu lasa spatiu intre nume si parola
+  if ($userName == trim($userName) && strpos($userName, ' ') !== false) {
+    $continue = False;
+    header("Location: register.php?space_error");
+  }
+  if ($userPass == trim($userPass) && strpos($userPass, ' ') !== false) {
+    $continue = False;
+    header("Location: register.php?space_error");
+  }
+
+  // verificare daca username e mai mic de 5 caractere
+  $usersize = strlen($userName);
+  if($usersize < 5)
+  {
+    $continue = False;
+    header("Location: register.php?userlow_error");
+  }
+
   // verificare prima litera sa inceapa cu o litera
   $userName = trim($userName);
   if (!ctype_alpha(substr($userName,0,1))) {
@@ -45,6 +63,7 @@
   if($continue) {
     // transmitere username
     $_SESSION['username'] = $userName;
+    $_SESSION['rank'] = $chatRank;
 
     // criptare parola
     $password  = md5($userPass);
@@ -59,6 +78,8 @@
     }
     else
       echo "ERROR 2: " . $sql . "<br>" . $link->error;
-    $link->close();
   }
+
+  // Inchidere conexiune
+  mysqli_close($link);
 ?>

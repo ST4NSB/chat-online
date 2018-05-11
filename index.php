@@ -30,13 +30,43 @@
 
         <div class="chatlogs">
 
+          <!--
           <div class="chat friend">
             <p class="chat-message">12:40 [Michael] <br> hi</p>
           </div>
 
           <div class="chat self">
             <p class="chat-message">12:48 [Me] <br> hi</p>
-          </div>
+          </div> -->
+
+          <?php
+            include 'dbconnect.php';
+
+            $sql_order = "SELECT * FROM chat_message ORDER BY id_message;";
+            $result = $link->query($sql_order);
+
+            $sql = 'SELECT user_message, message_time, user FROM chat_message';
+            if ($result = mysqli_query($link, $sql)) {
+              if (mysqli_num_rows($result) > 0) {
+                while ($row = mysqli_fetch_array($result)) {
+                  echo $row['user_message'] . '<br>';
+                  echo $row['message_time'] . '<br>';
+                  echo $row['user'] . '<br>';
+              }
+              // Eliberare rezultat
+              mysqli_free_result($result);
+            } else {
+              echo 'No records matching your query were found.';
+            }
+          } else {
+            echo 'ERROR: Could not able to execute ' . $sql . mysqli_error($link);
+          }
+
+
+
+            // Inchidere conexiune
+            mysqli_close($link);
+          ?>
 
         </div>
 

@@ -13,7 +13,8 @@
   $sql2 = 'CREATE TABLE chat_message(
     id_message INT AUTO_INCREMENT PRIMARY KEY UNIQUE,
     user_message VARCHAR(100),
-    message_time time
+    message_time TIME,
+    user VARCHAR(30)
   )';
 
   if (mysqli_query($link, $sql1)) {
@@ -27,5 +28,8 @@
   } else {
     echo 'ERROR: Could not able to execute ' . $sql . mysqli_error($link);
   }
+
+  // Inchidere conexiune
+  mysqli_close($link);
 
 ?>

@@ -27,10 +27,22 @@
     var time = new Date();
     var hour = time.getHours();
     console.log("Your actual hour is: " + hour);
-    var jsusername = '<?php echo $_SESSION['username'];?>';
+    var jsusername = '<?php echo $_SESSION['username']; ?>';
+    var getRank = '<?php echo $_SESSION['rank'];?>';
+    var user_rank = "[NONE]";
     var createspan = document.createElement('span');
+    var createspan2 = document.createElement('span');
     createspan.className = "myusername";
     createspan.innerHTML = jsusername;
+    if(getRank == 1) {
+      user_rank = "[USER]";
+      createspan2.className = "userrank";
+    }
+    else {
+       user_rank = "[ADMIN]";
+       createspan2.className = "admrank";
+     }
+    createspan2.innerHTML = user_rank;
 
     var message = "ERROR 3: ";
     if((hour >= 23 && hour <= 24) || (hour >= 0 && hour <= 6) )
@@ -44,6 +56,8 @@
 
     document.getElementById('timeofday').innerHTML = message;
     document.getElementById('timeofday').appendChild(createspan);
+    document.getElementById('timeofday').appendChild(createspan2);
+
   </script>
 
 </body>

@@ -11,4 +11,7 @@
     echo 'ERROR: Could not able to execute ' . $sql . mysqli_error($link);
   }
 
+  // Inchidere conexiune
+  mysqli_close($link);
+
 ?>

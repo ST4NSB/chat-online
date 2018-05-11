@@ -48,6 +48,14 @@
                 {
                     echo 'Password length must be minimum 7 characters or higher';
                 }
+                if(strpos($fullUrl, "userlow_error") == true)
+                {
+                    echo 'Username lenght must be minimum 5 characters or higher';
+                }
+                if(strpos($fullUrl, "space_error") == true)
+                {
+                    echo 'There can\'t be spaces between Username or Password!';
+                }
             ?>
           </div>
           <div class="register__inputs">
