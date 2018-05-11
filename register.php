@@ -34,19 +34,19 @@
                 $fullUrl = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
                 if(strpos($fullUrl, "pass_error") == true)
                 {
-                    echo 'Password doesn\'t match!';
+                    echo 'Password confirmation doesn\'t match your password!';
                 }
                 if(strpos($fullUrl, "nruser_error") == true)
                 {
-                    echo 'Your username must start with a letter!';
+                    echo 'Invalid starting character at username!';
                 }
                 if(strpos($fullUrl, "exuser_error") == true)
                 {
-                    echo 'This username already exists! Choose another one!';
+                    echo 'This username already exists!';
                 }
                 if(strpos($fullUrl, "passlow_error") == true)
                 {
-                    echo 'Password must be higher than 7 characters!';
+                    echo 'Password length must be minimum 7 characters or higher';
                 }
             ?>
           </div>
