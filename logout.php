@@ -4,6 +4,6 @@
   session_destroy();
   $_SESSION['$isUserLogged'] = False;
 
-  header("location:index.php");
+  header("location: login.php");
   exit();
 ?>

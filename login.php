@@ -36,6 +36,10 @@
               {
                   echo 'Username or password is not correct!';
               }
+              if(strpos($fullUrl, "pas_error") == true)
+              {
+                  echo 'Your password is not correct!';
+              }
             ?>
           </div>
           <div class="login__username">
