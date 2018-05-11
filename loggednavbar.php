@@ -29,7 +29,7 @@
     console.log("Your actual hour is: " + hour);
     var jsusername = '<?php echo $_SESSION['username']; ?>';
     var getRank = '<?php echo $_SESSION['rank'];?>';
-    var user_rank = "[NONE]";
+    var user_rank = "[ERROR]";
     var createspan = document.createElement('span');
     var createspan2 = document.createElement('span');
     createspan.className = "myusername";

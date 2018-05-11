@@ -47,7 +47,7 @@
   background-color: #D35400;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 900px) {
   .nav__wrapper {
     font-size: 10px;
     padding-right: 10px;
