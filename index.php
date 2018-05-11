@@ -25,7 +25,7 @@
   ?>
 
   <main class="main__content">
-    <form class="form__chat">
+    <form class="form__chat" action="chat_action.php" method="post">
       <div class="chatbox">
 
         <div class="chatlogs">
@@ -49,7 +49,7 @@
             }
             else {
               echo 'placeholder="Type your message here.."';
-            }?> type="text" id="mytxt" name="mytxt"></textarea>
+            }?> type="text" id="chat_text" name="chat_text"></textarea>
           <button <?php if(!$_SESSION['$isUserLogged']) echo "disabled"; ?> id="sendbtn" type="submit">SEND</button>
         </div>
 

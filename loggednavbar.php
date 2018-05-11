@@ -32,8 +32,8 @@
     createspan.className = "myusername";
     createspan.innerHTML = jsusername;
 
-    var message = "";
-    if((hour >= 23 && hour <= 24) || (hour >= 1 && hour <= 6) )
+    var message = "ERROR 3: ";
+    if((hour >= 23 && hour <= 24) || (hour >= 0 && hour <= 6) )
       message = "Good night, ";
     if(hour >= 7 && hour <= 12)
       message = "Good morning, ";
