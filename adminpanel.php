@@ -37,7 +37,7 @@
             // Eliberare rezultat
             mysqli_free_result($result);
           } else {
-            echo 'No users found';
+            echo 'No users found.';
           }
           } else {
           echo 'ERROR: Could not able to execute ' . $sql . mysqli_error($link);
