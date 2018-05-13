@@ -1,10 +1,11 @@
 .about__main {
   padding: 1px;
   margin: 0;
+  color: #A9A9A9;
 }
 
 .about__mainwindow {
-  background-color: #edf5e1;
+  background-color: #fff5ed;
   box-shadow: 0 4px black;
   color: black;
   width: 650px;
@@ -14,12 +15,15 @@
   margin-bottom: 1px;
   border-radius: 10px;
   padding-top: 10px;
-  border: 20px solid #379683;
+  border: 20px solid #964000;
+  outline: 2px dashed #632a00;
+  outline-offset: -9px;
 }
 
 .about__mainwindow h1, h2 {
   display: inline-block;
-  background-color: #5cdb95;
+  background-color: #964000;
+  color: #f5f5f5;
   margin: 4px 0 0 0;
   padding: 4px;
   border-radius: 10px;
@@ -29,7 +33,8 @@
 
 .about__mainwindow h3 {
   display: inline-block;
-  background-color: #1b8beb;
+  background-color: #BE5504;
+  color: #F5F5F5;
   margin: 7px 0 0 0;
   padding: 4px;
   border-radius: 10px;
@@ -44,7 +49,7 @@
 }
 
 .about__text span {
-  color: #1b8beb;
+  color: #c62323;
 }
 
 @media screen and (max-width: 800px) {
