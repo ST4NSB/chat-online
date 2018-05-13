@@ -28,7 +28,7 @@
   ?>
 
   <main class="main__content">
-    <form class="form__chat" action="chat_action.php" method="post">
+    <form class="form__chat" action="chat_action.php" method="get">
       <div class="chatbox">
 
         <div id="chatData" class="chatlogs">

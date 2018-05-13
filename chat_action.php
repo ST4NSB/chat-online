@@ -4,7 +4,7 @@
     include 'dbconnect.php';
     date_default_timezone_set("Europe/Bucharest"); // USAGE: date("H:i:s"); - H - hour(24), i - minutes, s - seconds
 
-    $chat_message = $_POST['chat_text'];
+    $chat_message = $_GET['chat_text'];
     $message_time = date("H:i:s");
     $username = $_SESSION['username'];
     $userRank = $_SESSION['rank'];
