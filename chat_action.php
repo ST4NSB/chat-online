@@ -101,7 +101,7 @@
             header("Location: index.php");
           }
           else
-            echo "ERROR 4: " . $sql . "<br>" . $link->error;
+            echo "ERROR: " . $sql . "<br>" . $link->error;
         }
       }
     }

@@ -16,7 +16,7 @@
       header("Location: adminpanel.php?usercreated");
     }
     else
-      echo "ERROR 8: " . $sql . "<br>" . $link->error;
+      echo "ERROR: " . $sql . "<br>" . $link->error;
 
   // Inchidere conexiune
   mysqli_close($link);

@@ -140,7 +140,7 @@
       header("Location: index.php");
     }
     else
-      echo "ERROR 2: " . $sql . "<br>" . $link->error;
+      echo "ERROR: " . $sql . "<br>" . $link->error;
   }
 
   // Inchidere conexiune

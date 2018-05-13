@@ -36,37 +36,29 @@
           <?php
             include 'dbconnect.php';
 
-            $sql = 'SELECT id_message, user_message, message_time, user_id FROM chat_message ORDER BY id_message ASC';
+            $sql = 'SELECT m.id_message , m.user_message, m.message_time, m.user_id, u.username FROM chat_message m LEFT JOIN chat_user u ON m.user_id = u.id_user ORDER BY m.id_message ASC';
             if ($result = mysqli_query($link, $sql)) {
               if (mysqli_num_rows($result) > 0) {
                 while ($row = mysqli_fetch_array($result)) {
                   $msgtime = $row['message_time'];
                   $thismsg = $row['user_message'];
-                  $iduser = $row['user_id'];
-                  $sqlc = "SELECT username FROM chat_user WHERE id_user='$iduser'";
-                  if ($result2 = mysqli_query($link, $sqlc)) {
-                    if (mysqli_num_rows($result2) > 0) {
-                      while ($row = mysqli_fetch_array($result2)) {
-                        if($row['username'] === $_SESSION['username']) {
-                          echo '<div class="chat self">';
-                            echo '<p class="chat-message"> <span class="selfchatname">' . $row['username'] . '<span class="space"></span> (' . $msgtime . ')</span><br>' . $thismsg . '</p>';
-                          echo '</div>';
-                        }
-                        else {
-                          echo '<div class="chat friend">';
-                            echo '<p class="chat-message"> <span class="friendchatname">' . $row['username'] . '<span class="space"></span> (' . $msgtime . ')</span><br>' . $thismsg . '</p>';
-                          echo '</div>';
-                        }
-                      }
-                    }
+                  $usermsg = $row['username'];
+                  if($usermsg === $_SESSION['username']) {
+                    echo '<div class="chat self">';
+                      echo '<p class="chat-message"> <span class="selfchatname">' . $usermsg . '<span class="space"></span> (' . $msgtime . ')</span><br>' . $thismsg . '</p>';
+                    echo '</div>';
                   }
-                  else echo 'ERROR 5: Could not able to execute ' . $sql . mysqli_error($link);
-              }
+                  else {
+                    echo '<div class="chat friend">';
+                      echo '<p class="chat-message"> <span class="friendchatname">' . $usermsg . '<span class="space"></span> (' . $msgtime . ')</span><br>' . $thismsg . '</p>';
+                    echo '</div>';
+                  }
+                }
               // Eliberare rezultat
               mysqli_free_result($result);
             }
           }
-          else echo 'ERROR 6: Could not able to execute ' . $sql . mysqli_error($link);
+          else echo 'ERROR: Could not able to execute ' . $sql . mysqli_error($link);
 
           // Inchidere conexiune
           mysqli_close($link);
@@ -108,7 +100,6 @@
     objDiv.scrollTop = objDiv.scrollHeight;
 
     // mesaj trimis la enter
-
     document.getElementById('inputArea').addEventListener("keyup", function(event) {
       event.preventDefault();
       // 13 - enter code
