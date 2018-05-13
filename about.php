@@ -26,19 +26,22 @@
       <div class="about__mainwindow">
         <h1>Online Chat - About</h1>
         <ul class="about__text">
-          <li>Real time online chat using database and php!</li>
+          <li>Online chat using HTML, CSS, PHP, JS, SQL!</li>
           <li>Made for an university course project!</li>
           <li>Author: <span>Bărbulescu Adrian</span> (personal links in the footer)</li>
         </ul>
         <h2>Chat Commands</h2> <br>
         <h3>USER</h3>
         <ul class="about__text">
+          <li>*msg - writes your message in bold and italic
           <li>/about - goes to about page</li>
           <li>/logout - log out from your current account</li>
+          <li>/users - see a list with all registered users</li>
         </ul>
         <h3>ADMIN</h3>
         <ul class="about__text">
-          <li>TBA</li>
+          <li>/clearchat - clears and delete all messages</li>
+          <li>/adminpanel - opens the administration panel</li>
         </ul>
       </div>
   </main>

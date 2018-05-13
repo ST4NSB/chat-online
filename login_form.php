@@ -11,6 +11,7 @@
     if ($result->num_rows > 0) {
       while($row = $result->fetch_assoc()) {
         $_SESSION['$isUserLogged'] = True;
+        //$_SESSION['id_user'] = $row['id_user'];
         $_SESSION['username'] = $row['username'];
         $_SESSION['rank'] = $row['chat_rank'];
         header("Location: index.php");
@@ -24,6 +25,7 @@
       if ($result2->num_rows > 0) {
         while($row = $result2->fetch_assoc()) {
           $_SESSION['$isUserLogged'] = True;
+          //$_SESSION['id_user'] = $row['id_user'];
           $_SESSION['username'] = $row['username'];
           $_SESSION['rank'] = $row['chat_rank'];
           header("Location: index.php");

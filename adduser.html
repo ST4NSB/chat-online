@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> Add User - Online Chat</title>
+  <link rel="shortcut icon" type="image/png" href="assets/images/favicon.png">
+  <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/adminpanelstyle.css">
+</head>
+
+<body>
+
+  <main class="ap__main">
+    <h1>User</h1>
+    <form action="adduser_form.php" method="post">
+      <input placeholder="Username" name="cu_username" type="text" maxlength="30" required>
+      <input placeholder="e-mail" name="cu_email" type="email" maxlength="30" required>
+      <label for="cu_rank">Rank: </label>
+      <select name="cu_rank">
+        <option value="1">User</option>
+        <option value="2">Admin</option>
+      </select>
+      <input placeholder="Password" name="cu_password" type="password" maxlength="30" required>
+      <button class="ap__links" type="submit">Submit</button>
+      <a href="adminpanel.php" class="ap__links">Back</a>
+    </form>
+  </main>
+
+
+</body>

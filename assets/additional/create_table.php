@@ -14,7 +14,7 @@
     id_message INT AUTO_INCREMENT PRIMARY KEY UNIQUE,
     user_message VARCHAR(100),
     message_time TIME,
-    user VARCHAR(30)
+    user_id INT
   )';
 
   if (mysqli_query($link, $sql1)) {

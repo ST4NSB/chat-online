@@ -1,0 +1,60 @@
+.ap__main {
+  display: block;
+  margin: 0;
+  padding: 0;
+  padding-left: 50px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  width: 15%;
+}
+
+.ap__main h1 {
+  display: inline-block;
+  margin-bottom: 2px;
+  text-shadow: 1px 3px black;
+}
+
+.ap__main h2 {
+  margin: 0;
+  color: orange;
+}
+
+.ap__main input {
+  display: block;
+  border: 2px solid black;
+  width: 160px;
+  padding: 8px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.grid__main {
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+.grid__item {
+  padding: 5px;
+  color: #ffcc00;
+}
+
+.ap__links {
+  font-size: 20px;
+  text-decoration: none;
+  background-color: #1e1e1e;
+  color: white;
+  padding: 2px 9px;
+  border-radius: 25px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.ap__links:hover {
+  color: #E0E0E0;
+}
+
+.major__links {
+  padding-top: 15px;
+}
