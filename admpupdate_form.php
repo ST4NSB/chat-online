@@ -2,10 +2,10 @@
     session_start();
     include 'dbconnect.php';
 
-    $username = $_POST['edit_username'];
-    $email = $_POST['edit_email'];
-    $rank = $_POST['edit_rank'];
-    $password = $_POST['edit_password'];
+    $username = filter_input(INPUT_POST, 'edit_username', FILTER_SANITIZE_STRING);
+    $email = filter_input(INPUT_POST, 'edit_email', FILTER_SANITIZE_EMAIL);
+    $rank = filter_input(INPUT_POST, 'edit_rank', FILTER_SANITIZE_NUMBER_INT);
+    $password = filter_input(INPUT_POST, 'edit_password', FILTER_SANITIZE_STRING);
     $password  = md5($password);
 
     $old_username = "";

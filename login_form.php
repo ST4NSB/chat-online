@@ -2,8 +2,8 @@
     session_start();
     include 'dbconnect.php';
 
-    $userName = $_POST['log_username'];
-    $passWord = $_POST['log_password'];
+    $userName = filter_input(INPUT_POST, 'log_username', FILTER_SANITIZE_STRING);
+    $passWord = filter_input(INPUT_POST, 'log_password', FILTER_SANITIZE_STRING);
     $hashed_pass = md5($passWord);
 
     $sql = "SELECT * FROM chat_user WHERE username='$userName' and password='$passWord'"; // verificare parola ne-hashuita
