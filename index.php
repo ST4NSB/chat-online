@@ -95,6 +95,10 @@
 
 
   <script>
+
+    // setare focus pe txt box
+    document.getElementById("chat_text").focus();
+
     // scrollul in josul paginii
     var objDiv = document.getElementById("chatData");
     objDiv.scrollTop = objDiv.scrollHeight;
@@ -104,7 +108,7 @@
       event.preventDefault();
       // 13 - enter code
       if (event.keyCode === 13) {
-          document.getElementById("sendbtn").click();
+          document.getElementById("sendbtn").click(); // sau focus()
       }
     });
 

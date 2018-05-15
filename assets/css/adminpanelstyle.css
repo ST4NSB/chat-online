@@ -20,7 +20,7 @@
   color: orange;
 }
 
-.ap__main input {
+.ap__main input, select {
   display: block;
   border: 2px solid black;
   width: 160px;
