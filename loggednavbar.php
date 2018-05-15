@@ -2,8 +2,11 @@
   $isActive = $_SESSION['currentpg'];
 ?>
 
+<!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="utf-8">
+  <title>navigation bar on logged</title>
   <link rel="stylesheet" type="text/css" href="assets/css/navbar.css">
   <link rel="stylesheet" type="text/css" href="assets/css/navbarlogged.css">
 </head>

@@ -110,7 +110,8 @@
       if (event.keyCode === 13) {
           document.getElementById("sendbtn").click(); // sau focus()
       }
-    });
+    }
+  );
 
   </script>
 
