@@ -104,14 +104,13 @@
     objDiv.scrollTop = objDiv.scrollHeight;
 
     // mesaj trimis la enter
-    document.getElementById('inputArea').addEventListener("keyup", function(event) {
-      event.preventDefault();
-      // 13 - enter code
-      if (event.keyCode === 13) {
+    var txtboxinput = document.getElementById('inputArea');
+    txtboxinput.addEventListener("keyup", function(event) {
+      event.preventDefault(); // optional
+      if (event.keyCode === 13) { // 13 - enter code
           document.getElementById("sendbtn").click(); // sau focus()
       }
-    }
-  );
+    });
 
   </script>
 
