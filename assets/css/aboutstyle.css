@@ -114,7 +114,7 @@
   }
 }
 
-@media screen and (max-height: 600px) {
+@media screen and (max-height: 650px) {
   .about__mainwindow {
     height: 490px;
     margin-bottom: 1px;
