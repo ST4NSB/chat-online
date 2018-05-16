@@ -55,12 +55,14 @@
 .friend .chat-message {
 	background-color: #f7d0bb;
 	color: #484848;
+	border-top-left-radius: 0px;
 }
 
 .self .chat-message {
 	background-color: #964000;
 	color: #fff;
 	margin-left: 230px;
+	border-top-right-radius: 0px;
 }
 
 .selfchatname {
