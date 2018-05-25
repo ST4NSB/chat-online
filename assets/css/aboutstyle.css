@@ -108,7 +108,7 @@
 
 @media screen and (max-height: 768px) {
   .about__mainwindow {
-    height: 350px;
+    height: 465px;
     margin-bottom: 1px;
     margin-top: 97px;
   }
@@ -116,8 +116,9 @@
 
 @media screen and (max-height: 650px) {
   .about__mainwindow {
-    height: 490px;
+    font-size: 14px;
+    height: 450px;
     margin-bottom: 1px;
-    margin-top: 57px;
+    margin-top: 70px;
   }
 }
