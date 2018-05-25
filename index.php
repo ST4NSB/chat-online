@@ -63,17 +63,6 @@
           // Inchidere conexiune
           mysqli_close($link);
         ?>
-
-        <?php
-            $fullUrl = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-            if(strpos($fullUrl, "info_error") == true)
-            {
-                echo '<script>
-                  window.alert("Can\'t type this kind of thing in chat!");
-                </script>';
-            }
-         ?>
-
         </div>
 
 
