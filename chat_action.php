@@ -39,7 +39,7 @@
       }
       if(strcmp($command, "users") == 0) {
           $isMessage = False;
-          header("Location: adminpanel.php?command");
+          header("Location: users.php");
       }
       if(strcmp($command, "clearchat") == 0 && $userRank == 2) {
           $sql = "DELETE FROM chat_message";

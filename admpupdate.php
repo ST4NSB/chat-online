@@ -13,26 +13,20 @@
 <body>
   <?php
       include 'dbconnect.php';
+      $id = $_GET['id_user'];
       $username = "";
       $mail = "";
       $crank = "";
-      $sql = "SELECT username FROM chat_user";
-      if ($result = mysqli_query($link, $sql)) {
-        if (mysqli_num_rows($result) > 0) {
-          while ($row = mysqli_fetch_array($result)) {
-            $fullUrl = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-            if(strpos($fullUrl, $row['username']) == true)
-              $username = $row['username'];
-          }
-        }
-      }
+      $passw = "";
 
-      $sql = "SELECT * from chat_user WHERE username='$username'";
+      $sql = "SELECT * from chat_user WHERE id_user='$id'";
       if ($result = mysqli_query($link, $sql)) {
         if (mysqli_num_rows($result) > 0) {
           while ($row = mysqli_fetch_array($result)) {
+            $username = $row['username'];
             $mail = $row['email'];
             $crank = $row['chat_rank'];
+            $passw = $row['password'];
           }
         }
       }
@@ -42,7 +36,7 @@
   <main class="ap__main">
     <h1>User Edit</h1>
     <h2><?php echo $username; ?></h2>
-    <?php echo '<form action="admpupdate_form.php?' . $username . '" method="post">' ?>
+    <form action="admpupdate_form.php" method="post">
       <input placeholder="Username" name="edit_username" type="text" maxlength="30" required value="<?php echo $username; ?>">
       <input placeholder="e-mail" name="edit_email" type="email" maxlength="30" required value="<?php echo $mail; ?>">
       <label for="edit_rank">Rank: </label>
@@ -50,7 +44,10 @@
         <option value="1">User</option>
         <option value="2">Admin</option>
       </select>
-      <input placeholder="Password" name="edit_password" type="password" maxlength="30" required>
+      <input placeholder="Password" name="edit_password" type="password" maxlength="30" required value="<?php echo $passw; ?>">
+
+      <input value="<?php echo $id; ?>" type="hidden" name="id_user">
+
       <button class="ap__links" type="submit">Submit</button>
       <a href="adminpanel.php" class="ap__links">Back</a>
     </form>

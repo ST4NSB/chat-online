@@ -1,23 +1,16 @@
 <?php
     include 'dbconnect.php';
 
-    $fullUrl = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-    $sql = 'SELECT username FROM chat_user';
-    if ($result = mysqli_query($link, $sql)) {
-      if (mysqli_num_rows($result) > 0) {
-        while ($row = mysqli_fetch_array($result)) {
-          $usern = $row['username'];
-          if(strpos($fullUrl, $usern) == true) {
-            $sql = "DELETE FROM chat_user WHERE username='$usern'";
-            if ($link->query($sql) === TRUE)
-            {
-              //echo "Deleted successfully";
-              header("Location: adminpanel.php");
-            }
-            else { echo "ERROR 7: " . $sql . "<br>" . $link->error; }
-          }
-        }
-      }
+    $id = $_GET['id_user'];
+
+    $sql = "DELETE FROM chat_message WHERE user_id='$id'"; // deleting user messages
+    if ($link->query($sql) === TRUE)
+    {
+      $sql2 = "DELETE FROM chat_user WHERE id_user='$id'"; // deleting user
+      if ($link->query($sql2) === TRUE)
+        header("Location: adminpanel.php");
+      else echo "ERROR: " . $sql2 . "<br>" . $link->error;
     }
+    else echo "ERROR: " . $sql . "<br>" . $link->error;
 
 ?>
