@@ -7,7 +7,7 @@
 - Real Time chatroom with multiple users
 - Uses php & javascript as dynamic languages
 - MySQL database
-- Secure against Cross-site scripting and SQL Injection
+- Secured against Cross-site scripting and SQL Injection
 - Easy to use 
 - Time Logs
 - Simplistic and clean design
