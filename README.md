@@ -16,7 +16,7 @@
 
 ## Preview Chat
 
-**Chat Room**
+**Chatroom**
 
 ![](https://i.imgur.com/ONl8u9h.jpg)
 
