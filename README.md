@@ -1,7 +1,5 @@
 # Online Chatroom
 
-![](https://i.imgur.com/yp02JM4.jpg)
-
 ## Features
 
 - Real Time chatroom with multiple users
